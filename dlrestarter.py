@@ -27,9 +27,9 @@ while running:
             print("DOWNLOAD FAILURE EXCEEDED THRESHOLD. PROGRAM WILL TERMINATE.")
             running = False
             break #Something better?
-        os.system("taskkill /IM upc.exe")
+        os.system("taskkill /IM upc.exe") #Kill Uplay program and wait
         time.sleep(600)
-        os.system('"E:/Program Files (x86)/Ubisoft/Ubisoft Game Launcher/Uplay.exe"')
+        os.system('"E:/Program Files (x86)/Ubisoft/Ubisoft Game Launcher/Uplay.exe"') #Restart Uplay
         dlIcon = pyautogui.locateOnScreen('DLICON.PNG')
         while dlIcon == None:
             print("Couldnt locate DLICON")
